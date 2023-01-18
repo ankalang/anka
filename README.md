@@ -8,3 +8,5 @@ coverY: 0
 # 👋 Merhaba
 
 {% embed url="https://www.youtube.com/watch?v=ykP9q8JHLms" %}
+a
+{% endembed %}
