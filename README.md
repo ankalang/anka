@@ -1,12 +1,10 @@
 ---
-description: Selam dünya, burası Anka yazılım dilinin ana sayfası.
-cover: >-
-  https://images.unsplash.com/photo-1633306652208-c6187b1c5201?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHwxMHx8dHVya2lzaCUyMGZsYWd8ZW58MHx8fHwxNjc0MDUzNzA2&ixlib=rb-4.0.3&q=80
-coverY: 0
+description: Selam, burası Anka yazılım dilinin ana sayfası.
 ---
 
 # 👋 Merhaba
 
-{% embed url="https://www.youtube.com/watch?v=ykP9q8JHLms" %}
-a
-{% endembed %}
+Anka, hızlı ve kolay kullanımı ile öne çıkan bir Türkçe yazılım dilidir. Bu dil ile kullanıcılar programları kolayca yazabilir ve uygulamaları hızlı bir şekilde çalıştırabilirler. Anka ayrıca Türkçe komutlar içererek kullanıcılar için daha anlaşılır ve kullanımı kolay bir seçenek sunmaktadır.
+
+<figure><img src=".gitbook/assets/ray-so-export.png" alt=""><figcaption></figcaption></figure>
+
