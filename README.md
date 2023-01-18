@@ -1,2 +1,6 @@
-# anka
-Anka, Türkçe bir yazılım ve programlama dilidir.
+---
+description: Selam dünya, burası Anka yazılım dilinin ana sayfası.
+---
+
+# 👋 Merhaba
+
