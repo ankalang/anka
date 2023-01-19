@@ -4,7 +4,7 @@ description: >-
   görebilirsiniz.
 ---
 
-# İndir
+# 🗃 İndir
 
 {% content-ref url="windows.md" %}
 [windows.md](windows.md)
