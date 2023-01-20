@@ -1,0 +1,75 @@
+# CLI app
+cli = {}
+
+# Commands registered within this CLI app
+cli.commands = {}
+
+# Function used to register a command
+cli.cmd = f(name, description, flags = {}) {
+    dön f(fn) {
+        cli.commands[name] = {};
+        cli.commands[name].cmd = f() {
+            # Create flags with default values
+            döngü k, _ in flags {
+                v = flag(k)
+
+                eğer v {
+                    flags[k] = v
+                }
+            }
+            
+            # ara the original cmd
+            result = fn.ara([args()[3:], flags])
+
+            # eğer there's a result we print it out
+            eğer result {
+                eko(result)
+            }
+        }
+
+        cli.commands[name].description = description
+    }
+}
+
+cli.run = f() {
+    # ANK sees "ank script.ank xyz"
+    # so the command is the 3rd argument
+    cmd = arg(2)
+
+    # Not passing a command? Let's print the help
+    eğer !cmd {
+        dön cli.commands['help'].cmd()
+    }
+
+    eğer !cli.commands[cmd] {
+        exit(99, "command '${cmd}' not found")
+    }
+
+    dön cli.commands[cmd].cmd()
+}
+
+cli.repl = f() {
+    eko("$")
+    döngü cmd in girdi {
+        eğer cli.commands[cmd] {
+            cli.commands[cmd].cmd()
+        }   
+    }
+}
+
+@cli.cmd("help", "print this help message", {})
+f help() {
+    eko("Available commands:\n")
+
+    döngü cmd in cli.commands.keys().sort() {
+        s = "  * ${cmd}"
+
+        eğer cli.commands[cmd].description {
+            s += " - " + cli.commands[cmd].description
+        }
+
+        eko(s)
+    }
+}
+
+dön cli

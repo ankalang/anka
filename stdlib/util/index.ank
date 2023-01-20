@@ -1,0 +1,33 @@
+f memoize(ttl) {
+    ttl = ttl * 1000
+    memo_map = {}
+
+    dön f(fn) {
+        dön f() {
+            serialized_args = ....str()
+            cached = memo_map[serialized_args]
+            now = unix_ms()
+
+            eğer cached {
+                eğer cached.ts + ttl - now > 0 {
+                    dön cached.result
+                }
+
+                memo_map.pop(serialized_args)
+            }
+
+            res = fn.call(...)
+
+            memo_map[serialized_args] = {
+                "ts": now,
+                "result": res
+            }
+            
+            dön res
+        }
+    }
+}
+
+dön {
+    "memoize": memoize
+}

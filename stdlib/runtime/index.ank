@@ -1,0 +1,4 @@
+return {
+    "name": "ank",
+    "version": ANK_VERSION,
+}
